@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,9 +30,8 @@ Route::prefix('admin')->group(function() {
     Route::post('ruangan/edit', [RuanganController::class, 'update'])->name('admin.ruangan.edit');
     Route::post('ruangan/hapus', [RuanganController::class, 'delete'])->name('admin.ruangan.hapus');
 
-    Route::get('lokasi', function () {
-        return view('admin/lokasi');
-    })->name('admin.lokasi');
+    Route::get('lokasi', [LokasiController::class, 'lokasi_view'])->name('admin.lokasi');
+    Route::post('lokasi/simpan', [LokasiController::class, 'lokasi_update'])->name('admin.lokasi.simpan');
 
     Route::get('laporan_kegiatan', function () {
         return view('admin/laporan_kegiatan');
