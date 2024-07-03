@@ -73,8 +73,8 @@
                                             </svg>
                                             <span class="table-inner-text">{{ $absen->created_at }}</span>
                                         </td>
-                                        <td>{{ $absen->users->name }}</td>
-                                        <td class="text-center">{{ $absen->acticity }}</td>
+                                        <td>{{ $absen->user->name }}</td>
+                                        <td class="text-center">{!! $absen->activity !!}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
