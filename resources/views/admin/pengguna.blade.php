@@ -1,5 +1,9 @@
 @extends('admin/layout')
 
+@section('title')
+    <title>Pengguna | Absensi Magang</title>
+@endsection
+
 @section('content')
     <div id="tableCustomBasic" class="col-lg-12 col-12 layout-spacing">
 

@@ -1,5 +1,9 @@
 @extends('pembimbing/layout')
 
+@section('title')
+    <title>Laporan Kegiatan | Absensi Magang</title>
+@endsection
+
 @section('content')
     <div id="tableCustomBasic" class="col-lg-12 col-12 layout-spacing">
         <div class="widget-header">

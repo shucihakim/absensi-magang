@@ -1,5 +1,9 @@
 @extends('mahasiswa/layout')
 
+@section('title')
+    <title>Pengisian Absensi | Absensi Magang</title>
+@endsection
+
 @section('content')
     <div class="row layout-top-spacing">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">

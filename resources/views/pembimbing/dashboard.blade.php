@@ -1,5 +1,9 @@
 @extends('pembimbing/layout')
 
+@section('title')
+    <title>Dashboard | Absensi Magang</title>
+@endsection
+
 @section('content')
     <div class="row layout-top-spacing">
         <div class="col-4 layout-spacing">

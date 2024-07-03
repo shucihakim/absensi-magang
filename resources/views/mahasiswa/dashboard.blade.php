@@ -8,19 +8,11 @@
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Kehadiran</span>
-<<<<<<< HEAD
-                            <span class="w-value">{{ $total_kehadiran }}</span>
-=======
-                            <span class="w-value mt-2">10</span>
->>>>>>> 74dfb25161e0bfecc7adb60a184a8bbf30cdf517
+                            <span class="w-value mt-2">{{ $total_kehadiran }}</span>
                         </div>
                         <div class="w-icon bg-light-warning">
                             <div class="icon">
-<<<<<<< HEAD
-                                <i class="bi bi-person"></i>
-=======
                                 <i class="fa-solid fa-clock" style="font-size: 24px;"></i>
->>>>>>> 74dfb25161e0bfecc7adb60a184a8bbf30cdf517
                             </div>
                         </div>
                     </div>
@@ -62,22 +54,24 @@
                             </thead>
                             <tbody>
                                 @foreach ($absensi as $absen)
-                                <tr>
-                                    <td>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
-                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
-                                            </rect>
-                                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg>
-                                        <span class="table-inner-text">{{ $absen->created_at }}</span>
-                                    </td>
-                                    <td>{{ $absen->users->name }}</td>
-                                    <td class="text-center">{{ $absen->acticity }}</td>
-                                </tr>
+                                    <tr>
+                                        <td>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-calendar">
+                                                <rect x="3" y="4" width="18" height="18" rx="2"
+                                                    ry="2">
+                                                </rect>
+                                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                            </svg>
+                                            <span class="table-inner-text">{{ $absen->created_at }}</span>
+                                        </td>
+                                        <td>{{ $absen->users->name }}</td>
+                                        <td class="text-center">{{ $absen->acticity }}</td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
