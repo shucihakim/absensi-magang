@@ -31,9 +31,9 @@ class DashboardController extends Controller
     */
     public function adminDashboard() {
         $total_pengguna = User::count();
-        $total_kehadiran = Attendance::where('user_id', Auth::id())->count();
+        $total_kehadiran = Attendance::count();
         $total_ruangan = Rooms::count();
-        $absensi = Attendance::where('user_id', Auth::id())->with('user')->with('room')->get();
+        $absensi = Attendance::with('user')->with('room')->get();
         $data = [
             'total_pengguna' => $total_pengguna,
             'total_kehadiran' => $total_kehadiran,
@@ -48,10 +48,10 @@ class DashboardController extends Controller
     */
     public function pembimbingDashboard() {
         $total_peserta = User::where('role', 'peserta')->count();
-        $total_kehadiran = Attendance::where('user_id', Auth::id())->count();
+        $total_kehadiran = Attendance::count();
         $total_ruangan = Rooms::count();
         $ruangan = Rooms::all();
-        $absensi = Attendance::where('user_id', Auth::id())->with('user')->with('room')->get();
+        $absensi = Attendance::with('user')->with('room')->get();
         $data = [
             'total_peserta' => $total_peserta,
             'total_kehadiran' => $total_kehadiran,

@@ -12,13 +12,8 @@ class Rooms extends Model
     protected $table = 'rooms';
     protected $guarded = [];
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class, 'user_id');
-    }
-
-    public function room()
-    {
-        return $this->belongsTo(Rooms::class, 'room_id');
+        return $this->hasMany(User::class, 'room_id');
     }
 }

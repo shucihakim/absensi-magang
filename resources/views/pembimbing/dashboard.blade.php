@@ -63,14 +63,6 @@
                 <div class="widget-heading">
                     <div class="col d-flex justify-content-between align-items-center m-4">
                         <h5 style="font-weight: bold;">Absensi Peserta</h5>
-                        <div class="col-2">
-                            <select class="form-control">
-                                <option value="1" disabled selected>Pilih Ruangan</option>
-                                @foreach ($ruangan as $r)
-                                    <option value="{{ $r->id }}">{{ $r->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
                     </div>
                 </div>
                 <div class="widget-content">
