@@ -8,7 +8,7 @@
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Pengguna</span>
-                            <span class="w-value mt-2">10</span>
+                            <span class="w-value mt-2">{{ $total_pengguna  }}</span>
                         </div>
                         <div class="w-icon bg-light-success">
                             <div class="icon">
@@ -26,7 +26,7 @@
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Ruangan</span>
-                            <span class="w-value mt-2">10</span>
+                            <span class="w-value mt-2">{{  $total_ruangan }}</span>
                         </div>
                         <div class="w-icon bg-light-primary">
                             <div class="icon">
@@ -42,8 +42,8 @@
                 <div class="widget-content">
                     <div class="w-numeric-value">
                         <div class="w-content">
-                            <span class="w-value">Total Kehadrian</span>
-                            <span class="w-value mt-2">10</span>
+                            <span class="w-value">Total Kehadiran</span>
+                            <span class="w-value mt-2">{{ $total_kehadiran }}</span>
                         </div>
                         <div class="w-icon bg-light-warning">
                             <div class="icon">
@@ -57,7 +57,7 @@
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
             <div class="widget widget-table-two">
                 <div class="widget-heading">
-                    <h5 style="fonr-weight: bold;">Absensi Minggu Ini</h5>
+                    <h5 style="fonr-weight: bold;">Absensi Peserta</h5>
                 </div>
                 <div class="widget-content">
                     <div class="table-responsive">
@@ -65,7 +65,7 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        <div class="th-content">Nama Peserta</div>
+                                        <div class="th-content">Nama</div>
                                     </th>
                                     <th>
                                         <div class="th-content">Waktu</div>
@@ -74,114 +74,37 @@
                                         <div class="th-content th-heading">Ruangan</div>
                                     </th>
                                     <th>
-                                        <div class="th-content">Status</div>
+                                        <div class="th-content">Kegiatan</div>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($absensi as $absen)
+                                    
                                 <tr>
                                     <td>
-                                        <div class="td-content customer-name"><span>Luke Ivory</span>
+                                        <div class="td-content"><span>{{ $absen->user->name }}</span>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="td-content product-invoice">#46894</div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content pricing"><span class="">$56.07</span>
+                                        <div class="td-content">
+                                            <span>{{ $absen->created_at }}</span>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="td-content"><span class="badge badge-success">Paid</span>
+                                        <div class="td-content">
+                                            <span class="">
+                                                {{ $absen->room->name }}
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="td-content"><span>{!! $absen->activity !!}</span>
                                         </div>
                                     </td>
                                 </tr>
-
-                                <tr>
-                                    <td>
-                                        <div class="td-content customer-name"><span>Andy
-                                                King</span></div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content product-invoice">#76894</div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content pricing"><span class="">$88.00</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content"><span class="badge badge-primary">Shipped</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="td-content customer-name"><span>Laurie Fox</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content product-invoice">#66894</div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content pricing"><span class="">$126.04</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content"><span class="badge badge-success">Paid</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="td-content customer-name"><span>Ryan Collins</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content product-invoice">#89891</div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content pricing"><span class="">$108.09</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content"><span class="badge badge-primary">Shipped</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="td-content customer-name"><span>Irene
-                                                Collins</span></div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content product-invoice">#75844</div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content pricing"><span class="">$84.00</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content"><span class="badge badge-danger">Pending</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="td-content customer-name"><span>Sonia Shaw</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content product-invoice">#76844</div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content pricing"><span class="">$110.00</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td-content"><span class="badge badge-success">Paid</span>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @endforeach
+                                
                             </tbody>
                         </table>
                     </div>

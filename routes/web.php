@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LaporanController;
@@ -28,7 +29,10 @@ Route::prefix('admin')->group(function() {
     
     Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
-    Route::get('pengguna', [PenggunaController::class, 'pengguna_view'])->name('admin.pengguna');
+    Route::get('pengguna', [PenggunaController::class, 'view'])->name('admin.pengguna');
+    Route::post('pengguna/tambah', [PenggunaController::class, 'create'])->name('admin.pengguna.tambah');
+    Route::post('pengguna/edit', [PenggunaController::class, 'update'])->name('admin.pengguna.edit');
+    Route::post('pengguna/hapus', [PenggunaController::class, 'delete'])->name('admin.pengguna.hapus');
 
     Route::get('ruangan', [RuanganController::class, 'list'])->name('admin.ruangan');
     Route::post('ruangan/tambah', [RuanganController::class, 'create'])->name('admin.ruangan.tambah');
@@ -45,9 +49,7 @@ Route::prefix('admin')->group(function() {
 });
 
 Route::prefix('pembimbing')->group(function() {
-    Route::get('dashboard', function () {
-        return view('pembimbing/dashboard');    
-    })->name('pembimbing.dashboard');
+    Route::get('dashboard', [DashboardController::class, 'pembimbingDashboard'])->name('pembimbing.dashboard');
 
     Route::get('laporan_kegiatan', function () {
         return view('pembimbing/laporan_kegiatan');
@@ -56,17 +58,13 @@ Route::prefix('pembimbing')->group(function() {
     Route::get('laporan_kehadiran', function () {
         return view('pembimbing/laporan_kehadiran');
     })->name('pembimbing.laporan_kehadiran');
-
-    
 });
 
 
 Route::prefix('mahasiswa')->group(function() {
     Route::get('dashboard', [DashboardController::class, 'mahasiswa_dashboard'])->name('mahasiswa.dashboard');
 
-    Route::get('absensi', function () {
-        return view('mahasiswa/absensi');
-    })->name('mahasiswa.absensi');
+    Route::get('absensi', [AbsensiController::class, 'view'])->name('mahasiswa.absensi');
 
     Route::get('laporan_kegiatan', function () {
         return view('mahasiswa/laporan_kegiatan');
@@ -75,7 +73,4 @@ Route::prefix('mahasiswa')->group(function() {
     Route::get('laporan_kehadiran', function () {
         return view('mahasiswa/laporan_kehadiran');
     })->name('mahasiswa.laporan_kehadiran');
-
-
-
 });

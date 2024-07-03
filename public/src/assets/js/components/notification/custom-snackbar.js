@@ -96,3 +96,35 @@ add_notification('.snackbar-bg-dark', {
     actionTextColor: '#fff',
     backgroundColor: '#3b3f5c'
 })
+
+function showToast(text, color = 'info', pos = "bottom-right") {
+	let backgroundColor;
+
+	switch (color) {
+		case 'success':
+			backgroundColor = '#00ab55'; // green
+			break;
+		case 'info':
+			backgroundColor = '#007bff'; // blue
+			break;
+		case 'warning':
+			backgroundColor = '#ffc107'; // yellow
+			break;
+		case 'danger':
+			backgroundColor = '#dc3545'; // red
+			break;
+		case 'secondary':
+			backgroundColor = '#6c757d'; // grey
+			break;
+		default:
+			backgroundColor = '#333'; // default color (dark grey)
+			break;
+	}
+
+	Snackbar.show({
+		text,
+		actionTextColor: '#fff',
+		backgroundColor,
+		pos
+	});
+}
