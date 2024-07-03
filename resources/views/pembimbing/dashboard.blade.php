@@ -8,12 +8,11 @@
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Pengguna</span>
-                            <span class="w-value">10</span>
+                            <span class="w-value mt-2">10</span>
                         </div>
-                        <div class="w-icon">
+                        <div class="w-icon bg-light-success">
                             <div class="icon">
-                                <i class="bi bi-person"></i>
-
+                                <i class="fa-solid fa-user text-success" style="font-size: 24px;"></i>
                             </div>
                         </div>
                     </div>
@@ -27,12 +26,11 @@
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Ruangan</span>
-                            <span class="w-value">10</span>
+                            <span class="w-value mt-2">10</span>
                         </div>
-                        <div class="w-icon">
+                        <div class="w-icon bg-light-primary">
                             <div class="icon">
-                                <i class="bi bi-person"></i>
-
+                                <i class="fa-solid fa-door-open" style="font-size: 24px;"></i>
                             </div>
                         </div>
                     </div>
@@ -45,11 +43,11 @@
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Kehadiran</span>
-                            <span class="w-value">10</span>
+                            <span class="w-value mt-2">10</span>
                         </div>
-                        <div class="w-icon">
+                        <div class="w-icon bg-light-warning">
                             <div class="icon">
-                                <i class="bi bi-cow"></i>
+                                <i class="fa-solid fa-clock" style="font-size: 24px;"></i>
                             </div>
                         </div>
                     </div>
