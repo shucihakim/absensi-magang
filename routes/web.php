@@ -3,6 +3,7 @@
 use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\RuanganController;
@@ -18,7 +19,6 @@ Route::get('register', [AuthController::class, 'register_view'])->name("register
 Route::post('register/process', [AuthController::class, 'register_process'])->name("register.process");
 Route::get('home', [DashboardController::class, 'home'])->name("home");
 
-// admin login
 
 // logout
 Route::post('logout', [AuthController::class, 'logout'])->name("logout");
@@ -42,15 +42,8 @@ Route::prefix('admin')->group(function() {
     Route::get('lokasi', [LokasiController::class, 'lokasi_view'])->name('admin.lokasi');
     Route::post('lokasi/simpan', [LokasiController::class, 'lokasi_update'])->name('admin.lokasi.simpan');
 
-    Route::get('laporan_kegiatan', function () {
-        return view('admin/laporan_kegiatan');
-    })->name('admin.laporan_kegiatan');
-
-    Route::get('laporan_kehadiran', function () {
-        return view('admin/laporan_kehadiran');
-    })->name('admin.laporan_kehadiran');
-
-
+    Route::get('laporan_kegiatan', [LaporanController::class, 'laporanKegiatan_view'])->name('admin.laporan_kegiatan');
+    Route::get('laporan_kehadiran', [LaporanController::class, 'laporanKehadiran_view'])->name('admin.laporan_kehadiran');
 
 
 });
