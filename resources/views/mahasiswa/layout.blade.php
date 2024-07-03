@@ -327,8 +327,6 @@
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="../src/assets/js/scrollspyNav.js"></script>
-    <script src="../src/plugins/src/editors/quill/quill.js"></script>
-    <script src="../src/plugins/src/editors/quill/custom-quill.js"></script>
     @yield('script')
 </body>
 
