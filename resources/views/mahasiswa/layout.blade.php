@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
 
-    
+
     <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
     <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
 
@@ -43,10 +43,6 @@
     <link href="../src/plugins/src/notification/snackbar/snackbar.min.css" rel="stylesheet" type="text/css" />
     <link href="../src/plugins/css/light/notification/snackbar/custom-snackbar.css" rel="stylesheet" type="text/css" />
     <link href="../src/plugins/css/dark/notification/snackbar/custom-snackbar.css" rel="stylesheet" type="text/css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -131,12 +127,7 @@
                     <li class="menu {{ Route::is('mahasiswa.dashboard') ? 'active' : '' }}">
                         <a href="{{ route('mahasiswa.dashboard') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
+                                <i class="fa-regular fa-home align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Dashboard</span>
                             </div>
 
@@ -146,12 +137,7 @@
                     <li class="menu {{ Route::is('mahasiswa.absensi') ? 'active' : '' }}">
                         <a href="{{ route('mahasiswa.absensi') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
+                                <i class="fa-regular fa-file-pen align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Absensi</span>
                             </div>
 
@@ -161,14 +147,7 @@
                     <li class="menu {{ Route::is('mahasiswa.laporan_kehadiran') ? 'active' : '' }}">
                         <a href="{{ route('mahasiswa.laporan_kehadiran') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-plus-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
+                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Laporan Kehadiran</span>
                             </div>
                         </a>
@@ -176,14 +155,7 @@
                     <li class="menu {{ Route::is('mahasiswa.laporan_kegiatan') ? 'active' : '' }}">
                         <a href="{{ route('mahasiswa.laporan_kegiatan') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-plus-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
+                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Laporan kegiatan</span>
                             </div>
                         </a>
@@ -297,6 +269,8 @@
     <script src="../src/plugins/src/global/vendors.min.js"></script>
     <script src="../src/assets/js/custom.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <script src="../js/font-awesome.js"></script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="../src/plugins/src/apex/apexcharts.min.js"></script>

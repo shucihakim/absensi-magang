@@ -32,9 +32,6 @@
     <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
     <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
@@ -120,12 +117,7 @@
                     <li class="menu {{ Route::is('pembimbing.dashboard') ? 'active' : '' }}">
                         <a href="{{ route('pembimbing.dashboard') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
+                                <i class="fa-regular fa-home align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Dashboard</span>
                             </div>
 
@@ -136,13 +128,7 @@
                     <li class="menu {{ Route::is('pembimbing.laporan_kegiatan') ? 'active' : '' }}">
                         <a href="{{ route('pembimbing.laporan_kegiatan') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-ixon">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
+                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Laporan Kegiatan</span>
                             </div>
 
@@ -153,14 +139,7 @@
                     <li class="menu {{ Route::is('pembimbing.laporan_kehadiran') ? 'active' : '' }}">
                         <a href="{{ route('pembimbing.laporan_kehadiran') }}" class="dropdown-toggle">
                             <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-plus-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
+                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Laporan Kehadiran</span>
                             </div>
                         </a>
@@ -275,6 +254,8 @@
     <script src="../src/assets/js/custom.js"></script>
 
     <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <script src="../js/font-awesome.js"></script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="../src/plugins/src/apex/apexcharts.min.js"></script>
