@@ -82,8 +82,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary float-end">Simpan</button>
+                        <div class="col-12 text-end">
+                            <button class="btn btn-primary">Simpan</button>
                         </div>
                     </form>
                 </div>

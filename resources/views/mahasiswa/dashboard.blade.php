@@ -52,7 +52,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Waktu</th>
-                                    <th scope="col">Nama Peserta</th>
+                                    <th scope="col">Ruangan</th>
                                     <th class="text-center" scope="col">Kegiatan</th>
                                 </tr>
                             </thead>
@@ -73,7 +73,7 @@
                                             </svg>
                                             <span class="table-inner-text">{{ $absen->created_at }}</span>
                                         </td>
-                                        <td>{{ $absen->user->name }}</td>
+                                        <td>{{ $absen->room->name }}</td>
                                         <td class="text-center">{!! $absen->activity !!}</td>
                                     </tr>
                                 @endforeach

@@ -79,10 +79,10 @@
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label class="form-label">Akses</label>
-                                            <select class="form-select" name="email">
-                                                <option value="" disabled selected>Select Email</option>
-                                                <option value="email1@example.com">Pembimbing</option>
-                                                <option value="email2@example.com">Peserta</option>
+                                            <select class="form-select" name="akses">
+                                                <option value="" disabled selected>Pilih Akses</option>
+                                                <option value="Pembimbing">Pembimbing</option>
+                                                <option value="Peserta">Peserta</option>
                                             </select>
                                         </div>
                                     </div>
