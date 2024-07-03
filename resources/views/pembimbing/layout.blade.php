@@ -24,6 +24,10 @@
 
     <link href="../src/assets/css/dark/components/list-group.css" rel="stylesheet" type="text/css">
     <link href="../src/assets/css/dark/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../src/plugins/src/table/datatable/datatables.css">
+
+    <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
@@ -88,9 +92,9 @@
                     </div>
                     <div class="nav-item sidebar-toggle">
                         <div class="btn-toggle sidebarCollapse">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-chevrons-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left">
                                 <polyline points="11 17 6 12 11 7"></polyline>
                                 <polyline points="18 17 13 12 18 7"></polyline>
                             </svg>
@@ -122,7 +126,7 @@
                             </svg><span>USER INTERFACE</span></div>
                     </li> --}}
                     <li class="menu">
-                        <a href="#elements" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                        <a href="{{ route('admin.pengguna') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -137,8 +141,7 @@
 
                     </li>
                     <li class="menu">
-                        <a href="#components" data-bs-toggle="dropdown" aria-expanded="false"
-                            class="dropdown-toggle">
+                        <a href="#components" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -157,7 +160,7 @@
                     </li>
 
                     <li class="menu">
-                        <a href="#elements" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                        <a href="#elements" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -172,7 +175,7 @@
                     </li>
 
                     <li class="menu">
-                        <a href="#tables" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                        <a href="#tables" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -189,7 +192,7 @@
                     </li>
 
                     <li class="menu">
-                        <a href="#more" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                        <a href="#more" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -210,7 +213,6 @@
 
         </div>
         <!--  END SIDEBAR  -->
-
         <!--  BEGIN CONTENT AREA  -->
         <div id="content" class="main-content">
             <div class="layout-px-spacing">
@@ -247,209 +249,7 @@
                         </div>
                     </div>
                     <!--  END BREADCRUMBS  -->
-
-                    <div class="row layout-top-spacing">
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                            <div class="widget-two">
-                                <div class="widget-content">
-                                    <div class="w-numeric-value">
-                                        <div class="w-content">
-                                            <span class="w-value">Total Pengguna</span>
-                                            <span class="w-value">10</span>
-                                        </div>
-                                        <div class="w-icon">
-                                            <div class="icon">
-                                                <i class="bi bi-person"></i>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                            <div class="widget-two">
-                                <div class="widget-content">
-                                    <div class="w-numeric-value">
-                                        <div class="w-content">
-                                            <span class="w-value">Total Ruangan</span>
-                                            <span class="w-value">10</span>
-                                        </div>
-                                        <div class="w-icon">
-                                            <div class="icon">
-                                                <i class="bi bi-person"></i>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
-                            <div class="widget-two">
-                                <div class="widget-content">
-                                    <div class="w-numeric-value">
-                                        <div class="w-content">
-                                            <span class="w-value">Total Kehadrian</span>
-                                            <span class="w-value">10</span>
-                                        </div>
-                                        <div class="w-icon">
-                                            <div class="icon">
-                                                <i class="bi bi-cow"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                            <div class="widget widget-table-two">
-                                <div class="widget-heading">
-                                    <h5 class="">Absensi Minggu Ini</h5>
-                                </div>
-                                <div class="widget-content">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        <div class="th-content">Nama Peserta</div>
-                                                    </th>
-                                                    <th>
-                                                        <div class="th-content">Waktu</div>
-                                                    </th>
-                                                    <th>
-                                                        <div class="th-content th-heading">Ruangan</div>
-                                                    </th>
-                                                    <th>
-                                                        <div class="th-content">Status</div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-content customer-name"><span>Luke Ivory</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content product-invoice">#46894</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content pricing"><span
-                                                                class="">$56.07</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content"><span
-                                                                class="badge badge-success">Paid</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-content customer-name"><span>Andy
-                                                                King</span></div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content product-invoice">#76894</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content pricing"><span
-                                                                class="">$88.00</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content"><span
-                                                                class="badge badge-primary">Shipped</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-content customer-name"><span>Laurie Fox</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content product-invoice">#66894</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content pricing"><span
-                                                                class="">$126.04</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content"><span
-                                                                class="badge badge-success">Paid</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-content customer-name"><span>Ryan Collins</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content product-invoice">#89891</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content pricing"><span
-                                                                class="">$108.09</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content"><span
-                                                                class="badge badge-primary">Shipped</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-content customer-name"><span>Irene
-                                                                Collins</span></div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content product-invoice">#75844</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content pricing"><span
-                                                                class="">$84.00</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content"><span
-                                                                class="badge badge-danger">Pending</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="td-content customer-name"><span>Sonia Shaw</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content product-invoice">#76844</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content pricing"><span
-                                                                class="">$110.00</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="td-content"><span
-                                                                class="badge badge-success">Paid</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @yield('content')
                 </div>
             </div>
         </div>
@@ -487,11 +287,35 @@
     <script src="../src/plugins/src/mousetrap/mousetrap.min.js"></script>
     <script src="../src/plugins/src/waves/waves.min.js"></script>
     <script src="../layouts/horizontal-light-menu/app.js"></script>
+    <script src="../src/plugins/src/global/vendors.min.js"></script>
+    <script src="../src/assets/js/custom.js"></script>
+
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="../src/plugins/src/apex/apexcharts.min.js"></script>
     <script src="../src/assets/js/dashboard/dash_2.js"></script>
+    <script src="../src/plugins/src/table/datatable/datatables.js"></script>
+    <script>
+        $('#zero-config').DataTable({
+            "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+            "oLanguage": {
+                "oPaginate": {
+                    "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>',
+                    "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'
+                },
+                "sInfo": "Showing page _PAGE_ of _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "Search...",
+                "sLengthMenu": "Results :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 10
+        });
+    </script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
 </body>

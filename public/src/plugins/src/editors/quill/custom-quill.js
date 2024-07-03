@@ -8,7 +8,7 @@ var quill = new Quill('#editor-container', {
       ['image', 'code-block']
     ]
   },
-  placeholder: 'Compose an epic...',
+  placeholder: 'Masukan Laporan Kegiatan ...',
   theme: 'snow'  // or 'bubble'
 });
 

@@ -28,7 +28,12 @@
 
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
-    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+    <link href="../src/assets/css/light/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/editors/quill/quill.snow.css">
+
+    <link href="../src/assets/css/dark/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/editors/quill/quill.snow.css">
 
 
 </head>
@@ -290,7 +295,6 @@
     <script src="../layouts/horizontal-light-menu/app.js"></script>
     <script src="../src/plugins/src/global/vendors.min.js"></script>
     <script src="../src/assets/js/custom.js"></script>
-
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
@@ -317,8 +321,13 @@
             "pageLength": 10
         });
     </script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="../src/plugins/src/highlight/highlight.pack.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
 
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="../src/assets/js/scrollspyNav.js"></script>
+    <script src="../src/plugins/src/editors/quill/quill.js"></script>
+    <script src="../src/plugins/src/editors/quill/custom-quill.js"></script>
 </body>
 
 </html>
