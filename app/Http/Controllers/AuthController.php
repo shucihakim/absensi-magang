@@ -104,9 +104,11 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request) {
-        User::where('email', Auth::user()->email)->update([
-            'status' => false,
-        ]);
+        if (Auth::user()) {
+            User::where('email', Auth::user()->email)->update([
+                'status' => false,
+            ]);
+        }
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
@@ -114,9 +116,11 @@ class AuthController extends Controller
     }
     // admin
     public function logout_admin(Request $request) {
-        User::where('email', Auth::user()->email)->update([
-            'status' => false,
-        ]);
+        if (Auth::user()) {
+            User::where('email', Auth::user()->email)->update([
+                'status' => false,
+            ]);
+        }
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
