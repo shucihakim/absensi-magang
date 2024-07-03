@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attendance;
+use App\Models\Rooms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,5 +23,29 @@ class DashboardController extends Controller
         } else {
             return redirect()->route('login');
         }
+    }
+
+    /*
+        ADMIN
+    */
+
+    /*
+        PEMBIMBING
+    */
+    
+    /*
+        PESERTA
+    */
+
+    public function mahasiswa_dashboard() {
+        $total_kehadiran = Attendance::where('user_id', Auth::id())->count();
+        $total_ruangan = Rooms::count();
+        $absensi = Attendance::where('user_id', Auth::id())->with('user')->get();
+        $data = [
+            'total_kehadiran' => $total_kehadiran,
+            'total_ruangan' => $total_ruangan,
+            'absensi' => $absensi,
+        ];
+        return view('mahasiswa/dashboard', $data);
     }
 }

@@ -28,6 +28,9 @@
 
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
+    
+    <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
+    <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 
@@ -318,7 +321,7 @@
         });
     </script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
+    @yield('script')
 </body>
 
 </html>

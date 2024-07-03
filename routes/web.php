@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,13 +19,15 @@ Route::prefix('admin')->group(function() {
     Route::get('dashboard', function () {
         return view('admin/dashboard');
     })->name('admin.dashboard');
+
     Route::get('pengguna', function () {
         return view('admin/pengguna');
     })->name('admin.pengguna');
 
-    Route::get('ruangan', function () {
-        return view('admin/ruangan');
-    })->name('admin.ruangan');
+    Route::get('ruangan', [RuanganController::class, 'list'])->name('admin.ruangan');
+    Route::post('ruangan/tambah', [RuanganController::class, 'create'])->name('admin.ruangan.tambah');
+    Route::post('ruangan/edit', [RuanganController::class, 'update'])->name('admin.ruangan.edit');
+    Route::post('ruangan/hapus', [RuanganController::class, 'delete'])->name('admin.ruangan.hapus');
 
     Route::get('lokasi', function () {
         return view('admin/lokasi');
@@ -61,9 +64,7 @@ Route::prefix('pembimbing')->group(function() {
 
 
 Route::prefix('mahasiswa')->group(function() {
-    Route::get('dashboard', function () {
-        return view('mahasiswa/dashboard');
-    })->name('mahasiswa.dashboard');
+    Route::get('dashboard', [DashboardController::class, 'mahasiswa_dashboard'])->name('mahasiswa.dashboard');
 
     Route::get('absensi', function () {
         return view('mahasiswa/absensi');
