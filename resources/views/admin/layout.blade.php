@@ -82,11 +82,11 @@
             </ul>
 
             <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
-                 <li>
+                <li>
                     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                        <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>   
+                        <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>
                     </button>
-                 </li>
+                </li>
             </ul>
 
         </header>
@@ -279,30 +279,30 @@
         </div>
 
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
-        aria-hidden="true">
-        <form action="{{ route('logout') }}" method="POST">\
-            @csrf
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            X
-                        </button>
-                    </div>
-                    <input id="delete-id" type="hidden" name="id">
-                    <div class="modal-body">
-                        Apakah anda ingin keluar aplikasi?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
-                                class="flaticon-cancel-12"></i> Batal</button>
-                        <button class="btn btn-primary">Ya</button>
+            aria-hidden="true">
+            <form action="{{ route('admin.logout') }}" method="POST">\
+                @csrf
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                X
+                            </button>
+                        </div>
+                        <input id="delete-id" type="hidden" name="id">
+                        <div class="modal-body">
+                            Apakah anda ingin keluar aplikasi?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
+                                    class="flaticon-cancel-12"></i> Batal</button>
+                            <button class="btn btn-primary">Ya</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
 
     </div>
 

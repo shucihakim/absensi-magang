@@ -68,6 +68,13 @@
                     <a href="index.html" class="nav-link"> <strong> ABSENSI PESERTA MAGANG</strong> </a>
                 </li>
             </ul>
+            <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
+                <li>
+                   <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                       <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>   
+                   </button>
+                </li>
+           </ul>
 
         </header>
     </div>

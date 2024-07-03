@@ -24,8 +24,9 @@ Route::get('home', [DashboardController::class, 'home'])->name("home");
 Route::post('logout', [AuthController::class, 'logout'])->name("logout");
 
 Route::prefix('admin')->group(function() {
-    Route::get('login', [AuthController::class, 'loginAdmin_view'])->name("login");
+    Route::get('login', [AuthController::class, 'loginAdmin_view'])->name("admin.login");
     Route::post('login/process', [AuthController::class, 'loginAdmin_process'])->name("loginAdmin.process");
+    Route::post('logout', [AuthController::class, 'logout_admin'])->name("admin.logout");
     
     Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
@@ -42,8 +43,8 @@ Route::prefix('admin')->group(function() {
     Route::get('lokasi', [LokasiController::class, 'lokasi_view'])->name('admin.lokasi');
     Route::post('lokasi/simpan', [LokasiController::class, 'lokasi_update'])->name('admin.lokasi.simpan');
 
-    Route::get('laporan_kegiatan', [LaporanController::class, 'laporanKegiatan_view'])->name('admin.laporan_kegiatan');
-    Route::get('laporan_kehadiran', [LaporanController::class, 'laporanKehadiran_view'])->name('admin.laporan_kehadiran');
+    Route::get('laporan_kegiatan', [LaporanController::class, 'laporanKegiatan_Admin'])->name('admin.laporan_kegiatan');
+    Route::get('laporan_kehadiran', [LaporanController::class, 'laporanKehadiran_Admin'])->name('admin.laporan_kehadiran');
 
 
 });
@@ -51,13 +52,10 @@ Route::prefix('admin')->group(function() {
 Route::prefix('pembimbing')->group(function() {
     Route::get('dashboard', [DashboardController::class, 'pembimbingDashboard'])->name('pembimbing.dashboard');
 
-    Route::get('laporan_kegiatan', function () {
-        return view('pembimbing/laporan_kegiatan');
-    })->name('pembimbing.laporan_kegiatan');
+    Route::get('laporan_kegiatan', [LaporanController::class, 'laporanKegiatan_pembimbing'])->name('pembimbing.laporan_kegiatan');
 
-    Route::get('laporan_kehadiran', function () {
-        return view('pembimbing/laporan_kehadiran');
-    })->name('pembimbing.laporan_kehadiran');
+    Route::get('laporan_kehadiran', [LaporanController::class, 'laporanKehadiran_pembimbing'])->name('pembimbing.laporan_kehadiran');
+        
 });
 
 
@@ -66,11 +64,8 @@ Route::prefix('mahasiswa')->group(function() {
 
     Route::get('absensi', [AbsensiController::class, 'view'])->name('mahasiswa.absensi');
 
-    Route::get('laporan_kegiatan', function () {
-        return view('mahasiswa/laporan_kegiatan');
-    })->name('mahasiswa.laporan_kegiatan');
+    Route::get('laporan_kegiatan', [LaporanController::class, 'laporanKegiatan_mahasiswa'])->name('mahasiswa.laporan_kegiatan');
+   
 
-    Route::get('laporan_kehadiran', function () {
-        return view('mahasiswa/laporan_kehadiran');
-    })->name('mahasiswa.laporan_kehadiran');
+    Route::get('laporan_kehadiran', [LaporanController::class, 'laporanKehadiran_mahasiswa'])->name('mahasiswa.laporan_kehadiran');
 });

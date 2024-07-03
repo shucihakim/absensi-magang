@@ -86,12 +86,22 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request) {
-        Auth::logout();
         User::where('email', Auth::user()->email)->update([
             'status' => false,
         ]);
+        Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect()->route('login')->with('success', 'Logout berhasil!');
+    }
+    // admin
+    public function logout_admin(Request $request) {
+        User::where('email', Auth::user()->email)->update([
+            'status' => false,
+        ]);
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('admin.login')->with('success', 'Logout berhasil!');
     }
 }

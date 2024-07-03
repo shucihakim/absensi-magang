@@ -99,10 +99,10 @@
                                                 <input class="form-check-input me-3" type="checkbox"
                                                     id="form-check-default">
                                                 <label class="form-check-label" for="form-check-default">
-                                                    Saya setuju
+                                                    setuju
                                                     <a href="javascript:void(0);" class="text-primary">Syarat
                                                         ketentuan</a>
-                                                    dan
+                                                    &
                                                     <a href="javascript:void(0);" class="text-primary">Kebijakan
                                                         privasi</a>
                                                 </label>
@@ -122,36 +122,6 @@
                                                 <hr>
                                                 <div class="seperator-text"> <span>Or continue with</span></div>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-12">
-                                        <div class="mb-4">
-                                            <button class="btn  btn-social-login w-100 ">
-                                                <img src="../src/assets/img/google-gmail.svg" alt=""
-                                                    class="img-fluid">
-                                                <span class="btn-text-inner">Google</span>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-12">
-                                        <div class="mb-4">
-                                            <button class="btn  btn-social-login w-100">
-                                                <img src="../src/assets/img/github-icon.svg" alt=""
-                                                    class="img-fluid">
-                                                <span class="btn-text-inner">Github</span>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-12">
-                                        <div class="mb-4">
-                                            <button class="btn  btn-social-login w-100">
-                                                <img src="../src/assets/img/twitter.svg" alt=""
-                                                    class="img-fluid">
-                                                <span class="btn-text-inner">Twitter</span>
-                                            </button>
                                         </div>
                                     </div>
 
