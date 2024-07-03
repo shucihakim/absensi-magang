@@ -16,4 +16,18 @@ class Settings extends Model
         $setting = self::where('key', $key)->first();
         return $setting ? $setting->value : null;
     }
+
+    public static function setValue($key, $value) {
+        $setting = self::where('key', $key)->first();
+        if ($setting) {
+            $setting->update([
+                'value' => $value,
+            ]);
+        } else {
+            self::create([
+                'key' => $key,
+                'value' => $value,
+            ]);
+        }
+    }   
 }

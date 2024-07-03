@@ -31,6 +31,15 @@
     
     <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
     <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
+    
+    <link href="../src/plugins/src/leaflet/leaflet.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="../src/plugins/src/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css">
+    <link href="../src/assets/css/light/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css">
+
+    <link href="../src/assets/css/dark/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
