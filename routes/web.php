@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,8 +9,10 @@ Route::get('/', function () {
 });
 
 Route::get('login', [AuthController::class, 'login_view'])->name("login");
-Route::get('regi    ster', [AuthController::class, 'register_view'])->name("register");
+Route::post('login/process', [AuthController::class, 'login_process'])->name("login.process");
+Route::get('register', [AuthController::class, 'register_view'])->name("register");
 Route::post('register/process', [AuthController::class, 'register_process'])->name("register.process");
+Route::get('home', [DashboardController::class, 'home'])->name("home");
 
 Route::prefix('admin')->group(function() {
     Route::get('dashboard', function () {

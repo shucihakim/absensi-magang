@@ -53,13 +53,28 @@
                                         <p>Masukan email dan password untuk mendaftar</p>
                                     </div>
 
-                                    @if(session('success'))
-                                        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><svg> ... </svg></button>
+                                    @if (session('success'))
+                                        <div class="alert alert-success alert-dismissible fade show mb-4"
+                                            role="alert">
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Close"><svg> ... </svg></button>
                                             <strong>Info!</strong> {{ session('success') }}
                                         </div>
                                     @endif
-        
+
+                                    @if ($errors->any())
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <div class="alert alert-danger alert-dismissible fade show mb-4"
+                                                    role="alert">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                        aria-label="Close"><svg> ... </svg></button>
+                                                    <strong>Perhatian!</strong> {{ $error }}
+                                                </div>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label class="form-label">Nama</label>
@@ -84,10 +99,12 @@
                                                 <input class="form-check-input me-3" type="checkbox"
                                                     id="form-check-default">
                                                 <label class="form-check-label" for="form-check-default">
-                                                    Saya setuju 
-                                                    <a href="javascript:void(0);" class="text-primary">Syarat ketentuan</a>
+                                                    Saya setuju
+                                                    <a href="javascript:void(0);" class="text-primary">Syarat
+                                                        ketentuan</a>
                                                     dan
-                                                    <a href="javascript:void(0);" class="text-primary">Kebijakan privasi</a>
+                                                    <a href="javascript:void(0);" class="text-primary">Kebijakan
+                                                        privasi</a>
                                                 </label>
                                             </div>
                                         </div>

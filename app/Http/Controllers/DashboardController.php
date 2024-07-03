@@ -10,11 +10,12 @@ class DashboardController extends Controller
     public function home() {
         if (Auth::check()) {
             $user = Auth::user();
-            if ($user->role == 'Admin') {
+            $role = strtolower($user->role);
+            if ($role == 'admin') {
                 return redirect()->route('admin.dashboard');
-            } elseif ($user->role == 'Pembimbing') {
+            } elseif ($role == 'pembimbing') {
                 return redirect()->route('pembimbing.dashboard');
-            } elseif ($user->role == 'Peserta') {
+            } elseif ($role == 'peserta') {
                 return redirect()->route('mahasiswa.dashboard');
             }
         } else {
