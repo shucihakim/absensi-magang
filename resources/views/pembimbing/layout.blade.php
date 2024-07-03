@@ -105,7 +105,7 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
-                    <li class="menu active">
+                    <li class="menu {{ Route::is('pembimbing.dashboard') ? 'active' : ''}}">
                         <a href="{{route('pembimbing.dashboard')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -121,7 +121,7 @@
 
                     </li>
                    
-                    <li class="menu">
+                    <li class="menu {{ Route::is('pembimbing.laporan_kegiatan') ? 'active' : ''}}">
                         <a href="{{route('pembimbing.laporan_kegiatan')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -138,7 +138,7 @@
 
                     </li>
 
-                    <li class="menu">
+                    <li class="menu {{ Route::is('pembimbing.laporan_kehadiran') ? 'active' : ''}}">
                         <a href="{{route('pembimbing.laporan_kehadiran')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

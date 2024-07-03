@@ -110,7 +110,7 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
-                    <li class="menu active">
+                    <li class="menu {{ Route::is('mahasiswa.dashboard') ? 'active' : ''}}">
                         <a href="{{route('mahasiswa.dashboard')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -125,14 +125,7 @@
                         </a>
 
                     </li>
-                    {{-- <li class="menu menu-heading">
-                        <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg><span>USER INTERFACE</span></div>
-                    </li> --}}
-                    <li class="menu">
+                    <li class="menu {{ Route::is('mahasiswa.absensi') ? 'active' : ''}}">
                         <a href="{{ route('mahasiswa.absensi') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -147,7 +140,7 @@
                         </a>
 
                     </li>
-                    <li class="menu">
+                    <li class="menu {{ Route::is('mahasiswa.laporan_kehadiran') ? 'active' : ''}}">
                         <a href="{{route('mahasiswa.laporan_kehadiran')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -162,7 +155,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="menu">
+                    <li class="menu {{ Route::is('mahasiswa.laporan_kegiatan') ? 'active' : ''}}">
                         <a href="{{route('mahasiswa.laporan_kegiatan')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

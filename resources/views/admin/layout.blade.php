@@ -147,7 +147,7 @@
                         </a>
 
                     </li>
-                    <li class="menu">
+                    <li class="menu {{ Route::is('admin.ruangan') ? 'active' : ''}}">
                         <a href="{{ route('admin.ruangan') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -166,7 +166,7 @@
 
                     </li>
 
-                    <li class="menu">
+                    <li class="menu {{ Route::is('admin.lokasi') ? 'active' : ''}}">
                         <a href="{{ route('admin.lokasi')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -181,7 +181,7 @@
 
                     </li>
 
-                    <li class="menu">
+                    <li class="menu {{ Route::is('admin.laporan_kegiatan') ? 'active' : ''}}">
                         <a href="{{route('admin.laporan_kegiatan')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -198,7 +198,7 @@
 
                     </li>
 
-                    <li class="menu">
+                    <li class="menu {{ Route::is('admin.laporan_kehadiran') ? 'active' : ''}}">
                         <a href="{{route('admin.laporan_kehadiran')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

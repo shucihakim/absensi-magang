@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,13 +17,9 @@ Route::post('register/process', [AuthController::class, 'register_process'])->na
 Route::get('home', [DashboardController::class, 'home'])->name("home");
 
 Route::prefix('admin')->group(function() {
-    Route::get('dashboard', function () {
-        return view('admin/dashboard');
-    })->name('admin.dashboard');
+    Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
-    Route::get('pengguna', function () {
-        return view('admin/pengguna');
-    })->name('admin.pengguna');
+    Route::get('pengguna', [PenggunaController::class, 'penggunna_view'])->name('admin.pengguna');
 
     Route::get('ruangan', [RuanganController::class, 'list'])->name('admin.ruangan');
     Route::post('ruangan/tambah', [RuanganController::class, 'create'])->name('admin.ruangan.tambah');

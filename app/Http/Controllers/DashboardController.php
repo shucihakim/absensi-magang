@@ -28,15 +28,20 @@ class DashboardController extends Controller
     /*
         ADMIN
     */
+    public function adminDashboard() {
+        return view('admin/dashboard');
+    }   
 
     /*
         PEMBIMBING
     */
-    
+    public function pembimbingDashboard() {
+        return view('pembimbing/dashboard');
+        
+    }  
     /*
         PESERTA
     */
-
     public function mahasiswa_dashboard() {
         $total_kehadiran = Attendance::where('user_id', Auth::id())->count();
         $total_ruangan = Rooms::count();

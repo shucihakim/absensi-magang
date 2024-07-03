@@ -10,7 +10,11 @@
         <div class="widget-header">
             <div class="widget-content widget-content-area">
                 <div class="table-responsive">
-                    <h4 style="font-weight: bold;">Master Pengguna</h4>
+                    <div class="col d-flex justify-content-between align-items-center m-4 ">
+                        <h4 style="font-weight: bold;">Master Pengguna</h4>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#tambahModal">Tambah</button>
+                    </div>
                     <table id="zero-config" class="table dt-table-hover">
                         <thead>
                             <tr>
@@ -96,8 +100,8 @@
                                         <a href="javascript:void(0);" class="action-btn btn-view bs-tooltip me-2"
                                             data-toggle="tooltip" data-placement="top" title="View">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-eye">
                                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                 <circle cx="12" cy="12" r="3"></circle>
@@ -249,8 +253,173 @@
 
                         </tbody>
                     </table>
+                    <div class="modal fade" id="tambahModal" tabindex="-1" role="dialog"
+                        aria-labelledby="tambahModalLabel" aria-hidden="true">
+                        <form action="{{ route('admin.ruangan.tambah') }}" method="POST">\
+                            @csrf
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="tambahModalLabel">Tambah Pengguna</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            X
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Nama</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Masukan Nama Ruangan" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Email</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Masukan Email"
+                                                    name="name">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Posisi</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Masukan Posisi"
+                                                    name="name">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Password</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Masukan Password"
+                                                    name="name">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
+                                                class="flaticon-cancel-12"></i> Batal</button>
+                                        <button class="btn btn-primary">Simpan</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+                        aria-labelledby="editModalLabel" aria-hidden="true">
+                        <form action="{{ route('admin.ruangan.edit') }}" method="POST">\
+                            @csrf
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editModalLabel">Edit Pengguna</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            X
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Nama</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Masukan Nama Ruangan" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Email</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Masukan Email"
+                                                    name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Posisi</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Masukan Posisi"
+                                                    name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Password</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Masukan Password"
+                                                    name="name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
+                                                class="flaticon-cancel-12"></i> Batal</button>
+                                        <button class="btn btn-primary">Simpan</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog"
+                        aria-labelledby="hapusModalLabel" aria-hidden="true">
+                        <form action="{{ route('admin.ruangan.hapus') }}" method="POST">\
+                            @csrf
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="hapusModalLabel">Hapus Pengguna</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            X
+                                        </button>
+                                    </div>
+                                    <input id="delete-id" type="hidden" name="id">
+                                    <div class="modal-body">
+                                        Apakah anda ingin menghapus data ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
+                                                class="flaticon-cancel-12"></i> Batal</button>
+                                        <button class="btn btn-primary">Ya</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                </pre>
+
             </div>
         </div>
+    @endsection
+
+    @section('script')
+        <script>
+            $(document).ready(function() {
+                $('.btn-edit').click(function() {
+                    var id = $(this).data('id');
+                    var name = $(this).data('name');
+                    var email = $(this).data('email');
+                    var posisi = $(this).data('posisi');
+                    var password = $(this).data('password');
+                    
+                    $('#edit-name').val(name);
+                    $('#edit-id').val(id);
+                    $('#edit-email').val(email);
+                    $('#edit-posisi').val(posisi);
+                    $('#edit-password').val(password);
+                    $('#editModal').modal('show');
+                });
+
+                $('.btn-delete').click(function() {
+                    var id = $(this).data('id');
+                    $('#delete-id').val(id);
+                    $('#hapusModal').modal('show');
+                });
+            });
+        </script>
     @endsection
