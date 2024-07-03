@@ -46,6 +46,7 @@ class AuthController extends Controller
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
+            
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
@@ -53,5 +54,31 @@ class AuthController extends Controller
         } else {
             return redirect()->back()->withErrors(['Email atau password salah!']);
         }
+    }
+
+
+    // login admin
+    public function loginAdmin_view() {
+        return view('auth.login_admin');
+    }
+
+    public function loginAdmin_process(Request $request) {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+        ]);
+
+        if (Auth::attempt($request->only('email', 'password'))) {
+            return redirect()->route('home');
+        } else {
+            return redirect()->back()->withErrors(['Email atau password salah!']);
+        }
+    }
+
+    public function logout(Request $request) {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login')->with('success', 'Logout berhasil!');
     }
 }

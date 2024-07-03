@@ -17,7 +17,15 @@ Route::get('register', [AuthController::class, 'register_view'])->name("register
 Route::post('register/process', [AuthController::class, 'register_process'])->name("register.process");
 Route::get('home', [DashboardController::class, 'home'])->name("home");
 
+// admin login
+
+// logout
+Route::post('logout', [AuthController::class, 'logout'])->name("logout");
+
 Route::prefix('admin')->group(function() {
+    Route::get('login', [AuthController::class, 'loginAdmin_view'])->name("login");
+    Route::post('login/process', [AuthController::class, 'loginAdmin_process'])->name("loginAdmin.process");
+    
     Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
 
     Route::get('pengguna', [PenggunaController::class, 'penggunna_view'])->name('admin.pengguna');

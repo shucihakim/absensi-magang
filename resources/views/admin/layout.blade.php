@@ -28,18 +28,21 @@
 
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
-    
+
     <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
     <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
-    
+
     <link href="../src/plugins/src/leaflet/leaflet.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" type="text/css" href="../src/plugins/src/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../src/plugins/src/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css">
     <link href="../src/assets/css/light/scrollspyNav.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../src/plugins/css/light/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css">
 
     <link href="../src/assets/css/dark/scrollspyNav.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../src/plugins/css/dark/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -73,18 +76,23 @@
                 </svg></a>
 
             <ul class="navbar-item theme-brand flex-row  text-center">
-                {{-- <li class="nav-item theme-logo">
-                    <a href="index.html">
-                        <img src="../src/assets/img/logo2.svg" class="navbar-logo" alt="logo">
-                    </a>
-                </li> --}}
                 <li class="nav-item theme-text">
                     <a href="index.html" class="nav-link"> <strong> ABSENSI PESERTA MAGANG</strong> </a>
                 </li>
             </ul>
 
+            <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
+                 <li>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>   
+                    </button>
+                 </li>
+            </ul>
+
         </header>
+
     </div>
+
     <!--  END NAVBAR  -->
 
     <!--  BEGIN MAIN CONTAINER  -->
@@ -119,8 +127,8 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
-                    <li class="menu {{ Route::is('admin.dashboard') ? 'active' : ''}}">
-                        <a href="{{route('admin.dashboard')}}" class="dropdown-toggle">
+                    <li class="menu {{ Route::is('admin.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('admin.dashboard') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -141,7 +149,7 @@
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg><span>USER INTERFACE</span></div>
                     </li> --}}
-                    <li class="menu {{ Route::is('admin.pengguna') ? 'active' : ''}}">
+                    <li class="menu {{ Route::is('admin.pengguna') ? 'active' : '' }}">
                         <a href="{{ route('admin.pengguna') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -156,7 +164,7 @@
                         </a>
 
                     </li>
-                    <li class="menu {{ Route::is('admin.ruangan') ? 'active' : ''}}">
+                    <li class="menu {{ Route::is('admin.ruangan') ? 'active' : '' }}">
                         <a href="{{ route('admin.ruangan') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -175,8 +183,8 @@
 
                     </li>
 
-                    <li class="menu {{ Route::is('admin.lokasi') ? 'active' : ''}}">
-                        <a href="{{ route('admin.lokasi')}}" class="dropdown-toggle">
+                    <li class="menu {{ Route::is('admin.lokasi') ? 'active' : '' }}">
+                        <a href="{{ route('admin.lokasi') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -190,8 +198,8 @@
 
                     </li>
 
-                    <li class="menu {{ Route::is('admin.laporan_kegiatan') ? 'active' : ''}}">
-                        <a href="{{route('admin.laporan_kegiatan')}}" class="dropdown-toggle">
+                    <li class="menu {{ Route::is('admin.laporan_kegiatan') ? 'active' : '' }}">
+                        <a href="{{ route('admin.laporan_kegiatan') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -207,8 +215,8 @@
 
                     </li>
 
-                    <li class="menu {{ Route::is('admin.laporan_kehadiran') ? 'active' : ''}}">
-                        <a href="{{route('admin.laporan_kehadiran')}}" class="dropdown-toggle">
+                    <li class="menu {{ Route::is('admin.laporan_kehadiran') ? 'active' : '' }}">
+                        <a href="{{ route('admin.laporan_kehadiran') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -269,6 +277,32 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+        aria-hidden="true">
+        <form action="{{ route('logout') }}" method="POST">\
+            @csrf
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            X
+                        </button>
+                    </div>
+                    <input id="delete-id" type="hidden" name="id">
+                    <div class="modal-body">
+                        Apakah anda ingin keluar aplikasi?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
+                                class="flaticon-cancel-12"></i> Batal</button>
+                        <button class="btn btn-primary">Ya</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
     </div>
 
