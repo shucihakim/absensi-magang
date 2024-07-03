@@ -2,17 +2,25 @@
 
 @section('content')
     <div class="row layout-top-spacing">
-        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+        <div class="col-4 layout-spacing">
             <div class="widget-two">
                 <div class="widget-content">
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Kehadiran</span>
+<<<<<<< HEAD
                             <span class="w-value">{{ $total_kehadiran }}</span>
+=======
+                            <span class="w-value mt-2">10</span>
+>>>>>>> 74dfb25161e0bfecc7adb60a184a8bbf30cdf517
                         </div>
-                        <div class="w-icon">
+                        <div class="w-icon bg-light-warning">
                             <div class="icon">
+<<<<<<< HEAD
                                 <i class="bi bi-person"></i>
+=======
+                                <i class="fa-solid fa-clock" style="font-size: 24px;"></i>
+>>>>>>> 74dfb25161e0bfecc7adb60a184a8bbf30cdf517
                             </div>
                         </div>
                     </div>
@@ -20,18 +28,17 @@
             </div>
         </div>
 
-        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+        <div class="col-4 layout-spacing">
             <div class="widget-two">
                 <div class="widget-content">
                     <div class="w-numeric-value">
                         <div class="w-content">
                             <span class="w-value">Total Ruangan</span>
-                            <span class="w-value">{{ $total_ruangan }}</span>
+                            <span class="w-value mt-2">{{ $total_ruangan }}</span>
                         </div>
-                        <div class="w-icon">
+                        <div class="w-icon bg-light-primary">
                             <div class="icon">
-                                <i class="bi bi-person"></i>
-
+                                <i class="fa-solid fa-door-open" style="font-size: 24px;"></i>
                             </div>
                         </div>
                     </div>
