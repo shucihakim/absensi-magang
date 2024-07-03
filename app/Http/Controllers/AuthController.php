@@ -50,8 +50,21 @@ class AuthController extends Controller
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
-            
         ]);
+
+        if ($request->akses == 'Peserta') {
+            $user = User::where('email', $request->email)->where('role', 'Peserta')->first();
+            if (!$user) {
+                return redirect()->back()->withErrors(['Akun anda tidak terdaftar dipeserta!']);
+            }
+        } elseif ($request->akses == 'Pembimbing') {
+            $user = User::where('email', $request->email)->where('role', 'Pembimbing')->first();
+            if (!$user) {
+                return redirect()->back()->withErrors(['Akun anda tidak terdaftar dipembimbing!']);
+            }
+        } else {
+            return redirect()->back()->withErrors(['Pilih akses terlebih dahulu!']);
+        }
 
         if (Auth::attempt($request->only('email', 'password'))) {
             User::where('email', $request->email)->update([
@@ -74,6 +87,11 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
+
+        $user = User::where('email', $request->email)->where('role', 'Admin')->first();
+        if (!$user) {
+            return redirect()->back()->withErrors(['Akun anda tidak terdaftar diadmin!']);
+        }
 
         if (Auth::attempt($request->only('email', 'password'))) {
             User::where('email', Auth::user()->email)->update([

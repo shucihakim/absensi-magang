@@ -44,7 +44,7 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto">
                     <div class="card mt-3 mb-3">
                         <div class="card-body">
-                            <form action="{{ route('login.process') }}" method="POST">
+                            <form action="{{ route('loginAdmin.process') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
