@@ -34,7 +34,7 @@ class RuanganController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('admin.ruangan');
+        return redirect()->route('admin.ruangan')->with('success', 'Ruangan berhasil ditambahkan!');
     }
 
     public function update(Request $request) {
@@ -53,11 +53,11 @@ class RuanganController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('admin.ruangan');
+        return redirect()->route('admin.ruangan')->with('success', 'Ruangan berhasil diubah!');
     }
 
     public function delete(Request $request) {
         Rooms::where('id', $request->id)->delete();
-        return redirect()->route('admin.ruangan');
+        return redirect()->route('admin.ruangan')->with('success', 'Ruangan berhasil dihapus!');
     }
 }

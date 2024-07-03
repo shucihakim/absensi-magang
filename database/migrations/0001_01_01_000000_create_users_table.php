@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('role', ['Admin', 'Pembimbing', 'Peserta'])->default('Peserta');
+            $table->enum('role', ['Admin', 'Pembimbing', 'Peserta'])->default('Admin');
+            $table->boolean('status')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

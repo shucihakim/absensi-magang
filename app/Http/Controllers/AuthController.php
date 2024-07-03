@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function register_view() {
+    public function register_view()
+    {
         return view('auth.register');
     }
 
-    public function register_process(Request $request) {
+    public function register_process(Request $request)
+    {
         $rules = [
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
@@ -38,20 +40,33 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success', 'Registrasi berhasil silahkan login!');
     }
 
-    public function login_view() {
+    public function login_view()
+    {
         return view('auth.login');
     }
 
-    public function login_process(Request $request) {
+    public function login_process(Request $request)
+    {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
+            User::where('email', $request->email)->update([
+                'status' => true,
+            ]);
             return redirect()->route('home');
         } else {
             return redirect()->back()->withErrors(['Email atau password salah!']);
         }
+    }
+
+    public function logout_process(Request $request) {
+        User::where('email', Auth::user()->email)->update([
+            'status' => false,
+        ]);
+        Auth::logout();
+        return redirect()->route('login')->with('success', 'Anda berhasil logout!');
     }
 }

@@ -1,8 +1,12 @@
 @extends('mahasiswa/layout')
 
+@section('title')
+    <title>Dashboard | Absensi Magang</title>
+@endsection
+
 @section('content')
     <div class="row layout-top-spacing">
-        <div class="col-4 layout-spacing">
+        <div class="col-6 layout-spacing">
             <div class="widget-two">
                 <div class="widget-content">
                     <div class="w-numeric-value">
@@ -20,7 +24,7 @@
             </div>
         </div>
 
-        <div class="col-4 layout-spacing">
+        <div class="col-6 layout-spacing">
             <div class="widget-two">
                 <div class="widget-content">
                     <div class="w-numeric-value">
