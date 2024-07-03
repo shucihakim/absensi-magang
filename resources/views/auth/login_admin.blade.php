@@ -78,16 +78,6 @@
                                     
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Akses</label>
-                                            <select class="form-select" name="email">
-                                                <option value="" disabled selected>Select Email</option>
-                                                <option value="email1@example.com">Pembimbing</option>
-                                                <option value="email2@example.com">Peserta</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
                                             <label class="form-label">Email</label>
                                             <input type="email" class="form-control" name="email">
                                         </div>
@@ -115,6 +105,23 @@
                                             <button class="btn btn-secondary w-100">SIGN IN</button>
                                         </div>
                                     </div>
+
+                                    <div class="col-12 mb-4">
+                                        <div class="">
+                                            <div class="seperator">
+                                                <hr>
+                                                <div class="seperator-text"> <span>Or continue with</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <p class="mb-0">Dont't have an account ? <a
+                                                    href="{{ route('register') }}" class="text-warning">Sign Up</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </form>
                         </div>
