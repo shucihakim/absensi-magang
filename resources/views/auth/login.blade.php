@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>SignIn Boxed | CORK - Multipurpose Bootstrap Dashboard Template </title>
+    <title>Login | Absensi Magang </title>
     <link rel="icon" type="image/x-icon" href="../src/assets/img/favicon.ico" />
     <link href="../layouts/horizontal-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
     <link href="../layouts/horizontal-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
@@ -52,6 +52,15 @@
                                     <p>Enter your email and password to login</p>
 
                                 </div>
+                                
+                                @if (session('success'))
+                                    <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"><svg> ... </svg></button>
+                                        <strong>Info!</strong> {{ session('success') }}
+                                    </div>
+                                @endif
+
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
@@ -122,7 +131,7 @@
 
                                 <div class="col-12">
                                     <div class="text-center">
-                                        <p class="mb-0">Dont't have an account ? <a href="{{ route('register')}}"
+                                        <p class="mb-0">Dont't have an account ? <a href="{{ route('register') }}"
                                                 class="text-warning">Sign Up</a></p>
                                     </div>
                                 </div>
