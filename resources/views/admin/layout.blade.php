@@ -110,7 +110,7 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
-                    <li class="menu active">
+                    <li class="menu {{ Route::is('admin.dashboard') ? 'active' : ''}}">
                         <a href="{{route('admin.dashboard')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -132,7 +132,7 @@
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg><span>USER INTERFACE</span></div>
                     </li> --}}
-                    <li class="menu">
+                    <li class="menu {{ Route::is('admin.pengguna') ? 'active' : ''}}">
                         <a href="{{ route('admin.pengguna') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
