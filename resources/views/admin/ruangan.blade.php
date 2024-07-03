@@ -11,8 +11,8 @@
 
         </div>
         <div class="widget-content widget-content-area">
-            <div class="table-responsive m-4">
-                <div class="col d-flex justify-content-between align-items-center ">
+            <div class="table-responsive ">
+                <div class="col d-flex justify-content-between align-items-center m-4 ">
                     <h4 style="font-weight: bold;">Master Ruangan</h4>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#tambahModal">Tambah</button>
