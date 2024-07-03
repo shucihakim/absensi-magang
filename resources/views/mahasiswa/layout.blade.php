@@ -111,7 +111,7 @@
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
                     <li class="menu active">
-                        <a href="#dashboard" data-bs-toggle="dropdown" aria-expanded="true" class="dropdown-toggle">
+                        <a href="{{route('mahasiswa.dashboard')}}" data-bs-toggle="dropdown" aria-expanded="true" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -133,7 +133,7 @@
                             </svg><span>USER INTERFACE</span></div>
                     </li> --}}
                     <li class="menu">
-                        <a href="{{ route('admin.pengguna') }}" class="dropdown-toggle">
+                        <a href="{{ route('mahasiswa.absensi') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -148,7 +148,7 @@
 
                     </li>
                     <li class="menu">
-                        <a href="#more" class="dropdown-toggle">
+                        <a href="{{route('mahasiswa.laporan_kehadiran')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -163,7 +163,7 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="#more" class="dropdown-toggle">
+                        <a href="{{route('mahasiswa.laporan_kegiatan')}}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

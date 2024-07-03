@@ -1,4 +1,4 @@
-@extends('pembimbing/layout')
+@extends('mahasiswa/layout')
 
 @section('content')
     <div id="tableCustomBasic" class="col-lg-12 col-12 layout-spacing">
