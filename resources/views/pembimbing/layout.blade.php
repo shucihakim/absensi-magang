@@ -29,7 +29,12 @@
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
     <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
+    <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
@@ -70,11 +75,11 @@
             </ul>
             <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
                 <li>
-                   <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                       <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>   
-                   </button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>
+                    </button>
                 </li>
-           </ul>
+            </ul>
 
         </header>
     </div>
@@ -112,8 +117,8 @@
                 </div>
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
-                    <li class="menu {{ Route::is('pembimbing.dashboard') ? 'active' : ''}}">
-                        <a href="{{route('pembimbing.dashboard')}}" class="dropdown-toggle">
+                    <li class="menu {{ Route::is('pembimbing.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('pembimbing.dashboard') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -127,9 +132,9 @@
                         </a>
 
                     </li>
-                   
-                    <li class="menu {{ Route::is('pembimbing.laporan_kegiatan') ? 'active' : ''}}">
-                        <a href="{{route('pembimbing.laporan_kegiatan')}}" class="dropdown-toggle">
+
+                    <li class="menu {{ Route::is('pembimbing.laporan_kegiatan') ? 'active' : '' }}">
+                        <a href="{{ route('pembimbing.laporan_kegiatan') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -145,8 +150,8 @@
 
                     </li>
 
-                    <li class="menu {{ Route::is('pembimbing.laporan_kehadiran') ? 'active' : ''}}">
-                        <a href="{{route('pembimbing.laporan_kehadiran')}}" class="dropdown-toggle">
+                    <li class="menu {{ Route::is('pembimbing.laporan_kehadiran') ? 'active' : '' }}">
+                        <a href="{{ route('pembimbing.laporan_kehadiran') }}" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -226,6 +231,31 @@
                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                     </path>
                 </svg></p>
+        </div>
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+            aria-hidden="true">
+            <form action="{{ route('logout') }}" method="POST">\
+                @csrf
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                X
+                            </button>
+                        </div>
+                        <input id="delete-id" type="hidden" name="id">
+                        <div class="modal-body">
+                            Apakah anda ingin keluar aplikasi?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn btn-light-dark" data-bs-dismiss="modal"><i
+                                    class="flaticon-cancel-12"></i> Batal</button>
+                            <button class="btn btn-primary">Ya</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <!--  END CONTENT AREA  -->
