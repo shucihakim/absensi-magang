@@ -72,6 +72,7 @@ Route::prefix('mahasiswa')->group(function() {
     Route::get('dashboard', [DashboardController::class, 'mahasiswa_dashboard'])->name('mahasiswa.dashboard');
 
     Route::get('absensi', [AbsensiController::class, 'view'])->name('mahasiswa.absensi');
+    Route::post('absensi/simpan', [AbsensiController::class, 'create'])->name('mahasiswa.absensi.simpan');
 
     Route::get('laporan_kegiatan', function () {
         return view('mahasiswa/laporan_kegiatan');
