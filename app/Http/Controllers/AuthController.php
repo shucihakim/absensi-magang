@@ -49,7 +49,7 @@ class AuthController extends Controller
     {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required|min:6',
+            'password' => 'required',
         ]);
 
         if ($request->akses == 'Peserta') {
@@ -85,7 +85,7 @@ class AuthController extends Controller
     public function loginAdmin_process(Request $request) {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required|min:6',
+            'password' => 'required',
         ]);
 
         $user = User::where('email', $request->email)->where('role', 'Admin')->first();
