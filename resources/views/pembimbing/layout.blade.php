@@ -7,30 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     @yield('title')
     <link rel="icon" type="image/x-icon" href="../src/assets/img/favicon.ico" />
-    <link href="../layouts/horizontal-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
-    <link href="../layouts/horizontal-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
-    <script src="../layouts/horizontal-light-menu/loader.js"></script>
+    <link href="{{ asset('layouts/horizontal-light-menu/css/light/loader.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('layouts/horizontal-light-menu/css/dark/loader.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{ asset('layouts/horizontal-light-menu/loader.js') }}"></script>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../layouts/horizontal-light-menu/css/light/plugins.css" rel="stylesheet" type="text/css" />
-    <link href="../layouts/horizontal-light-menu/css/dark/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('src/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('layouts/horizontal-light-menu/css/light/plugins.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('layouts/horizontal-light-menu/css/dark/plugins.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="../src/plugins/src/apex/apexcharts.css" rel="stylesheet" type="text/css">
-    <link href="../src/assets/css/light/components/list-group.css" rel="stylesheet" type="text/css">
-    <link href="../src/assets/css/light/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('src/plugins/src/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('src/assets/css/light/components/list-group.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('src/assets/css/light/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="../src/assets/css/dark/components/list-group.css" rel="stylesheet" type="text/css">
-    <link href="../src/assets/css/dark/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../src/plugins/src/table/datatable/datatables.css">
+    <link href="{{ asset('src/assets/css/dark/components/list-group.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('src/assets/css/dark/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('src/plugins/src/table/datatable/datatables.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/table/datatable/dt-global_style.css">
-    <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('src/plugins/css/light/table/datatable/dt-global_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
 
-    <link href="../src/assets/css/light/components/modal.css" rel="stylesheet" type="text/css">
-    <link href="../src/assets/css/dark/components/modal.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('src/assets/css/light/components/modal.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('src/assets/css/dark/components/modal.css') }}" rel="stylesheet" type="text/css">
 
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
@@ -63,7 +63,7 @@
             <ul class="navbar-item theme-brand flex-row  text-center">
                 {{-- <li class="nav-item theme-logo">
                     <a href="index.html">
-                        <img src="../src/assets/img/logo2.svg" class="navbar-logo" alt="logo">
+                        <img src="{{ asset('src/assets/img/logo2.svg') }}" class="navbar-logo" alt="logo">
                     </a>
                 </li> --}}
                 <li class="nav-item theme-text">
@@ -72,7 +72,7 @@
             </ul>
             <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
                 <li>
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    <button class="btn btn-light-danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
                         <i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 15px;"></i>
                     </button>
                 </li>
@@ -97,7 +97,7 @@
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
                             <a href="./index.html">
-                                <img src="../src/assets/img/logo.svg" class="navbar-logo" alt="logo">
+                                <img src="{{ asset('src/assets/img/logo.svg') }}" class="navbar-logo" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -245,22 +245,22 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../src/plugins/src/mousetrap/mousetrap.min.js"></script>
-    <script src="../src/plugins/src/waves/waves.min.js"></script>
-    <script src="../layouts/horizontal-light-menu/app.js"></script>
-    <script src="../src/plugins/src/global/vendors.min.js"></script>
-    <script src="../src/assets/js/custom.js"></script>
+    <script src="{{ asset('src/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('src/plugins/src/mousetrap/mousetrap.min.js') }}"></script>
+    <script src="{{ asset('src/plugins/src/waves/waves.min.js') }}"></script>
+    <script src="{{ asset('layouts/horizontal-light-menu/app.js') }}"></script>
+    <script src="{{ asset('src/plugins/src/global/vendors.min.js') }}"></script>
+    <script src="{{ asset('src/assets/js/custom.js') }}"></script>
 
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <script src="../js/font-awesome.js"></script>
+    <script src="{{ asset('js/font-awesome.js') }}"></script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="../src/plugins/src/apex/apexcharts.min.js"></script>
-    <script src="../src/assets/js/dashboard/dash_2.js"></script>
-    <script src="../src/plugins/src/table/datatable/datatables.js"></script>
+    <script src="{{ asset('src/plugins/src/apex/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('src/assets/js/dashboard/dash_2.js') }}"></script>
+    <script src="{{ asset('src/plugins/src/table/datatable/datatables.js') }}"></script>
     <script>
         $('#zero-config').DataTable({
             "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +

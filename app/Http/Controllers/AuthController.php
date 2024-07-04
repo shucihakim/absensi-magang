@@ -37,7 +37,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('login')->with('success', 'Registrasi berhasil silahkan login!');
+        return redirect()->route('admin.login')->with('success', 'Registrasi berhasil silahkan login!');
     }
 
     public function login_view()

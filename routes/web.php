@@ -9,14 +9,9 @@ use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [DashboardController::class, 'home'])->name("home");
 Route::get('login', [AuthController::class, 'login_view'])->name("login");
 Route::post('login/process', [AuthController::class, 'login_process'])->name("login.process");
-Route::get('register', [AuthController::class, 'register_view'])->name("register");
-Route::post('register/process', [AuthController::class, 'register_process'])->name("register.process");
 Route::get('home', [DashboardController::class, 'home'])->name("home");
 
 
@@ -26,6 +21,8 @@ Route::post('logout', [AuthController::class, 'logout'])->name("logout");
 Route::prefix('admin')->group(function() {
     Route::get('login', [AuthController::class, 'loginAdmin_view'])->name("admin.login");
     Route::post('login/process', [AuthController::class, 'loginAdmin_process'])->name("loginAdmin.process");
+    Route::get('register', [AuthController::class, 'register_view'])->name("register");
+Route::post('register/process', [AuthController::class, 'register_process'])->name("register.process");
     Route::post('logout', [AuthController::class, 'logout_admin'])->name("admin.logout");
     
     Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
