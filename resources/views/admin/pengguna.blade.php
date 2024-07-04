@@ -62,7 +62,7 @@
                                     </td>
                                     <td>
                                         @if (strtolower($pengguna->role) == 'admin')
-                                            <span class="text-primary">Admin</span>
+                                            <span class="text-success">Admin</span>
                                         @elseif (strtolower($pengguna->role) == 'pembimbing')
                                             <span class="text-warning">Pembimbing</span>
                                         @elseif (strtolower($pengguna->role) == 'peserta')
