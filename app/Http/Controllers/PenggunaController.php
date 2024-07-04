@@ -46,7 +46,6 @@ class PenggunaController extends Controller
         $rules = [
             'name' => 'required',
             'email' => 'required|email|unique:users,email,'.$request->id,
-            'password' => 'required|min:6',
             'role' => 'required|in:Admin,Pembimbing,Peserta',
         ];
         $message = [
@@ -54,19 +53,28 @@ class PenggunaController extends Controller
             'email.required' => 'Form email masih kosong',
             'email.email' => 'Email tidak valid',
             'email.unique' => 'Email sudah terdaftar',
-            'password.required' => 'Form password masih kosong',
             'role.required' => 'Form role masih kosong',
             'role.in' => 'Role tidak valid',
         ];
 
+        if ($request->password) {
+            $rules['password'] = 'required|min:6';
+            $message['password.required'] = 'Form password masih kosong';
+        }
+
         $request->validate($rules, $message);
 
-        User::where('id', $request->id)->update([
+        $update_data = [
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
             'role' => $request->role,
-        ]);
+        ];
+
+        if ($request->password) {
+            $update_data['password'] = Hash::make($request->password);
+        }
+
+        User::where('id', $request->id)->update($update_data);
 
         return redirect()->route('admin.pengguna')->with('success', 'Pengguna berhasil diubah!');
     }
