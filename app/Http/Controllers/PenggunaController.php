@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attendance;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -81,6 +82,7 @@ class PenggunaController extends Controller
 
     public function delete(Request $request) {
         User::where('id', $request->id)->delete();
+        Attendance::where('user_id', $request->id)->delete();
         return redirect()->route('admin.pengguna')->with('success', 'Pengguna berhasil dihapus!');
     }
 }
