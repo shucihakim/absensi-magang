@@ -42,6 +42,7 @@
     <link href="{{ asset('src/plugins/src/notification/snackbar/snackbar.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('src/plugins/css/light/notification/snackbar/custom-snackbar.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('src/plugins/css/dark/notification/snackbar/custom-snackbar.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
 </head>
 
@@ -305,6 +306,22 @@
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="{{ asset('src/assets/js/scrollspyNav.js') }}"></script>
+    <script>
+        function print_page() {
+            window.onafterprint = function(e) {
+                $(window).off('mousemove', window.onafterprint);
+                $('#zero-config').dataTable().api().page.len(10).draw();
+                console.log('Print Dialog Closed..');
+            };
+
+            $('#zero-config').dataTable().api().page.len(-1).draw();
+            window.print();
+
+            setTimeout(function() {
+                $(window).one('mousemove', window.onafterprint);
+            }, 1);
+        }
+    </script>
     @yield('script')
 </body>
 

@@ -25,8 +25,10 @@
     <link href="{{ asset('src/assets/css/dark/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('src/plugins/src/table/datatable/datatables.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('src/plugins/css/light/table/datatable/dt-global_style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('src/plugins/css/light/table/datatable/dt-global_style.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
 
     <link href="{{ asset('src/assets/css/light/components/modal.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('src/assets/css/dark/components/modal.css') }}" rel="stylesheet" type="text/css">
@@ -42,6 +44,7 @@
     <link href="{{ asset('src/assets/css/dark/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css"
         href="{{ asset('src/plugins/css/dark/bootstrap-touchspin/custom-jquery.bootstrap-touchspin.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
@@ -79,8 +82,24 @@
             <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
                 <li class="nav-item theme-toggle-item">
                     <a href="javascript:void(0);" class="nav-link theme-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon dark-mode"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun light-mode"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-moon dark-mode">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-sun light-mode">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
                     </a>
                 </li>
 
@@ -112,7 +131,8 @@
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
                             <a href="./index.html">
-                                <img src="{{ asset('src/assets/img/logo.svg') }}" class="navbar-logo" alt="logo">
+                                <img src="{{ asset('src/assets/img/logo.svg') }}" class="navbar-logo"
+                                    alt="logo">
                             </a>
                         </div>
                     </div>
@@ -152,7 +172,8 @@
                     <li class="menu {{ Route::is('admin.ruangan') ? 'active' : '' }}">
                         <a href="{{ route('admin.ruangan') }}" class="dropdown-toggle">
                             <div class="">
-                                <i class="fa-regular fa-chalkboard-user align-middle mx-1" style="font-size: 20px"></i>
+                                <i class="fa-regular fa-chalkboard-user align-middle mx-1"
+                                    style="font-size: 20px"></i>
                                 <span>Ruangan</span>
                             </div>
 
@@ -163,7 +184,8 @@
                     <li class="menu {{ Route::is('admin.lokasi') ? 'active' : '' }}">
                         <a href="{{ route('admin.lokasi') }}" class="dropdown-toggle">
                             <div class="">
-                                <i class=" a-sharp fa-regular fa-location-dot align-middle mx-1" style="font-size: 20px"></i>
+                                <i class=" a-sharp fa-regular fa-location-dot align-middle mx-1"
+                                    style="font-size: 20px"></i>
                                 <span>Lokasi</span>
                             </div>
 
@@ -174,7 +196,8 @@
                     <li class="menu {{ Route::is('admin.laporan_kegiatan') ? 'active' : '' }}">
                         <a href="{{ route('admin.laporan_kegiatan') }}" class="dropdown-toggle">
                             <div class="">
-                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1" style="font-size: 20px"></i>
+                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1"
+                                    style="font-size: 20px"></i>
                                 <span>Laporan Kegiatan</span>
                             </div>
 
@@ -185,7 +208,8 @@
                     <li class="menu {{ Route::is('admin.laporan_kehadiran') ? 'active' : '' }}">
                         <a href="{{ route('admin.laporan_kehadiran') }}" class="dropdown-toggle">
                             <div class="">
-                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1" style="font-size: 20px"></i>
+                                <i class="fa-sharp fa-light fa-file-chart-column align-middle mx-1"
+                                    style="font-size: 20px"></i>
                                 <span>Laporan Kehadiran</span>
                             </div>
                         </a>
@@ -299,7 +323,7 @@
     <script src="{{ asset('layouts/horizontal-light-menu/app.js') }}"></script>
     <script src="{{ asset('src/plugins/src/global/vendors.min.js') }}"></script>
     <script src="{{ asset('src/assets/js/custom.js') }}"></script>
-    
+
     <script src="{{ asset('js/font-awesome.js') }}"></script>
 
     <!-- END GLOBAL MANDATORY SCRIPTS -->
@@ -325,6 +349,22 @@
             "lengthMenu": [7, 10, 20, 50],
             "pageLength": 10
         });
+    </script>
+    <script>
+        function print_page() {
+            window.onafterprint = function(e) {
+                $(window).off('mousemove', window.onafterprint);
+                $('#zero-config').dataTable().api().page.len(10).draw();
+                console.log('Print Dialog Closed..');
+            };
+
+            $('#zero-config').dataTable().api().page.len(-1).draw();
+            window.print();
+
+            setTimeout(function() {
+                $(window).one('mousemove', window.onafterprint);
+            }, 1);
+        }
     </script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     @yield('script')

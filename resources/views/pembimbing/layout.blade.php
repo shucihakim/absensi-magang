@@ -32,6 +32,7 @@
     <link href="{{ asset('src/assets/css/dark/components/modal.css') }}" rel="stylesheet" type="text/css">
 
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
 </head>
 
@@ -284,6 +285,22 @@
             "lengthMenu": [7, 10, 20, 50],
             "pageLength": 10
         });
+    </script>
+    <script>
+        function print_page() {
+            window.onafterprint = function(e) {
+                $(window).off('mousemove', window.onafterprint);
+                $('#zero-config').dataTable().api().page.len(10).draw();
+                console.log('Print Dialog Closed..');
+            };
+
+            $('#zero-config').dataTable().api().page.len(-1).draw();
+            window.print();
+
+            setTimeout(function() {
+                $(window).one('mousemove', window.onafterprint);
+            }, 1);
+        }
     </script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     @yield('script')

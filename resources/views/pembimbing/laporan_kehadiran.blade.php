@@ -11,9 +11,9 @@
                 <div class="table-responsive">
                     <div class="col d-flex justify-content-between align-items-center m-4">
                         <h4 style="font-weight: bold;">Laporan Kehadiran</h4>
-                        <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
+                        <button type="button" class="btn btn-primary" onclick="print_page()">Print</button>
                     </div>
-                    <table id="zero-config" class="table dt-table-hover">
+                    <table id="zero-config" class="table dt-table-hover printable">
                         <thead>
                             <tr>
                                 <th scope="col">Nama</th>

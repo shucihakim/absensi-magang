@@ -11,11 +11,12 @@
                 <div class="table-responsive">
                     <div class="col d-flex justify-content-between align-items-center m-4">
                         <h4 style="font-weight: bold;">Laporan Kehadiran</h4>
-                        <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
+                        <button type="button" class="btn btn-primary" onclick="print_page()">Print</button>
                     </div>
-                    <table id="zero-config" class="table dt-table-hover">
+                    <table id="zero-config" class="table dt-table-hover printable">
                         <thead>
                             <tr>
+                                <th scope="col">NIM</th>
                                 <th scope="col">Nama</th>
                                 <th class="text-center" scope="col">Waktu</th>
                                 <th class="text-center" scope="col">Ruangan</th>
@@ -24,6 +25,7 @@
                         <tbody>
                             @foreach ($laporan as $l)
                                 <tr>
+                                    <td>{{ $l->nim }}</td>
                                     <td>{{ $l->user->name }}</td>
                                     <td>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
