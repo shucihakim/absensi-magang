@@ -16,6 +16,7 @@
                     <table id="zero-config" class="table dt-table-hover printable">
                         <thead>
                             <tr>
+                                <th scope="col">NIM</th>
                                 <th scope="col">Nama</th>
                                 <th class="text-center" scope="col">Waktu</th>
                                 <th class="text-center" scope="col">Ruangan</th>
@@ -24,6 +25,7 @@
                         <tbody>
                             @foreach ($laporan as $l)
                                 <tr>
+                                    <td>{{ $l->nim }}</td>
                                     <td>{{ $l->user->name }}</td>
                                     <td>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
