@@ -81,7 +81,6 @@
 
         var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18,
-            attribution: 'JOKI NANCY-HOUSE',
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1
