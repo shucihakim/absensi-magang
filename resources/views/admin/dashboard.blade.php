@@ -81,7 +81,7 @@
                                         <div class="th-content">Kegiatan</div>
                                     </th>
                                     <th>
-                                        <div class="th-content">Instansi</div>
+                                        <div class="th-content">Institusi</div>
                                     </th>
                                     <th>
                                         <div class="th-content">Jarak</div>
