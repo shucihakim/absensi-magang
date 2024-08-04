@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->enum('role', ['Admin', 'Pembimbing', 'Peserta'])->default('Admin');
             $table->boolean('status')->default(false);
+            $table->string('institution')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

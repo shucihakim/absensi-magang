@@ -38,6 +38,7 @@ class PenggunaController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'role' => $request->role,
+            'institution' => $request->institution,
         ]);
 
         return redirect()->route('admin.pengguna')->with('success', 'Pengguna berhasil ditambahkan!');
@@ -69,6 +70,7 @@ class PenggunaController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'role' => $request->role,
+            'institution' => $request->institution,
         ];
 
         if ($request->password) {

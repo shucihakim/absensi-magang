@@ -78,7 +78,7 @@
                                     </td>
                                     <td class="text-center">
                                         <div class="action-btns">
-                                            <a href="javascript:void(0);" data-id="{{ $pengguna->id }}" data-name="{{ $pengguna->name }}" data-email="{{ $pengguna->email }}" data-posisi="{{ $pengguna->role }}" class="btn-edit text-warning bs-tooltip me-2"
+                                            <a href="javascript:void(0);" data-id="{{ $pengguna->id }}" data-name="{{ $pengguna->name }}" data-email="{{ $pengguna->email }}" data-posisi="{{ $pengguna->role }}" data-institusi="{{ $pengguna->institution }}" class="btn-edit text-warning bs-tooltip me-2"
                                                 data-toggle="tooltip" data-placement="top" title="Edit">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -135,6 +135,14 @@
                                             <div class="input-group">
                                                 <input type="email" class="form-control" placeholder="Masukan Email"
                                                     name="email">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Institusi</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Masukan Asal Sekolah / Universitas / Perusahaan"
+                                                    name="institution">
                                             </div>
                                         </div>
 
@@ -199,6 +207,13 @@
                                             <div class="input-group">
                                                 <input id="edit-email" type="text" class="form-control" placeholder="Masukan Email"
                                                     name="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="basic-url" class="form-label">Institusi</label>
+                                            <div class="input-group">
+                                                <input id="edit-institusi" type="text" class="form-control" placeholder="Masukan Asal Sekolah / Universitas / Perusahaan"
+                                                    name="institution">
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -270,11 +285,13 @@
                     var name = $(this).data('name');
                     var email = $(this).data('email');
                     var posisi = $(this).data('posisi');
+                    var institusi = $(this).data('institusi');
 
                     $('#edit-id').val(id);
                     $('#edit-name').val(name);
                     $('#edit-email').val(email);
                     $('#edit-posisi').val(posisi);
+                    $('#edit-institusi').val(institusi);
                     $('#editModal').modal('show');
                 });
 

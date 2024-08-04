@@ -39,7 +39,7 @@
                                     </svg>
                                     <span class="table-inner-text">{{ $l->created_at }}</span>
                                 </td>
-                                <td class="text-center">{!! $l->activity !!}</td>
+                                <td class="text-wrap">{!! $l->activity !!}</td>
                             </tr>
                             @endforeach
                         </tbody>

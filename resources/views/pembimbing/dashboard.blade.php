@@ -82,6 +82,12 @@
                                     <th>
                                         <div class="th-content">Kegiatan</div>
                                     </th>
+                                    <th>
+                                        <div class="th-content">Institusi</div>
+                                    </th>
+                                    <th>
+                                        <div class="th-content">Jarak</div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -105,6 +111,14 @@
                                         </td>
                                         <td>
                                             <div class="td-content"><span>{!! $absen->activity !!}</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="td-content"><span>{{ $absen->user->institution ?? '-' }}</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="td-content"><span>{{ $absen->distance }}</span>
                                             </div>
                                         </td>
                                     </tr>

@@ -147,9 +147,15 @@
                                 <i class="fa-regular fa-file-pen align-middle mx-1" style="font-size: 20px"></i>
                                 <span>Absensi</span>
                             </div>
-
                         </a>
-
+                    </li>
+                    <li class="menu {{ Route::is('mahasiswa.kegiatan') ? 'active' : '' }}">
+                        <a href="{{ route('mahasiswa.kegiatan') }}" class="dropdown-toggle">
+                            <div class="">
+                                <i class="fa-regular fa-file-pen align-middle mx-1" style="font-size: 20px"></i>
+                                <span>Kegiatan</span>
+                            </div>
+                        </a>
                     </li>
                     <li class="menu {{ Route::is('mahasiswa.laporan_kehadiran') ? 'active' : '' }}">
                         <a href="{{ route('mahasiswa.laporan_kehadiran') }}" class="dropdown-toggle">

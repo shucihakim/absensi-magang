@@ -20,6 +20,8 @@
                                 <th scope="col">Nama</th>
                                 <th class="text-center" scope="col">Waktu</th>
                                 <th class="text-center" scope="col">Ruangan</th>
+                                <th class="text-center" scope="col">Institusi</th>
+                                <th class="text-center" scope="col">Jarak</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,6 +42,8 @@
                                         <span class="table-inner-text">{{ $l->created_at }}</span>
                                     </td>
                                     <td class="text-center">{{ $l->room->name }}</td>
+                                    <td class="text-center">{{ $l->user->institution ?? '-' }}</td>
+                                    <td class="text-center">{{ $l->distance }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

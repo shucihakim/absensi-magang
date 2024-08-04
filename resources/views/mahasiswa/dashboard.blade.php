@@ -54,6 +54,7 @@
                                     <th scope="col">Waktu</th>
                                     <th scope="col">Ruangan</th>
                                     <th class="text-center" scope="col">Kegiatan</th>
+                                    <th class="text-center" scope="col">Jarak</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -75,6 +76,7 @@
                                         </td>
                                         <td>{{ $absen->room->name }}</td>
                                         <td class="text-center">{!! $absen->activity !!}</td>
+                                        <td class="text-center">{{ $absen->distance }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
